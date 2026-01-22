@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Dầu Gấc Thiên Nhiên</title>
+  <title>Dầu Gấc Thiên Nhiên - Hội bạn thân</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -17,14 +17,33 @@
       color: white;
       padding: 40px 20px;
       text-align: center;
+      position: relative;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
+    .menu-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 26px;
+      cursor: pointer;
     }
-    header p {
-      font-size: 1.1em;
-      margin-top: 10px;
+    nav {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 240px;
+      height: 100%;
+      background: #fff;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+      padding: 20px;
+      transition: 0.3s;
+      z-index: 1000;
+    }
+    nav a {
+      display: block;
+      margin-bottom: 15px;
+      text-decoration: none;
+      color: #d84315;
+      font-weight: bold;
     }
     section {
       padding: 30px 20px;
@@ -33,7 +52,6 @@
     }
     section h2 {
       color: #d84315;
-      margin-bottom: 15px;
     }
     .features {
       display: grid;
@@ -46,33 +64,6 @@
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .card h3 {
-      margin-top: 0;
-      color: #ff5722;
-    }
-    .usage li {
-      margin-bottom: 8px;
-    }
-    .cta {
-      background: #ff7043;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-      border-radius: 16px;
-    }
-    .cta h2 {
-      margin-top: 0;
-    }
-    .cta a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 24px;
-      background: white;
-      color: #ff5722;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-    }
     footer {
       background: #333;
       color: #ccc;
@@ -84,7 +75,13 @@
 </head>
 <body>
 
+<nav id="menu">
+  <a href="index.html">🏠 Trang chủ</a>
+  <a href="quytrinh.html">⚙️ Quy trình sản xuất</a>
+</nav>
+
 <header>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
   <h1>DẦU GẤC THIÊN NHIÊN</h1>
   <p>Tinh túy từ quả gấc – Bảo vệ sức khỏe & sắc đẹp</p>
   <p><strong>Thương hiệu:</strong> Hội bạn thân</p>
@@ -93,16 +90,15 @@
 <section>
   <h2>Giới thiệu sản phẩm</h2>
   <p>
-    Dầu gấc là sản phẩm được chiết xuất từ màng đỏ của quả gấc tươi, 
-    hoàn toàn tự nhiên, không chất bảo quản. Sản phẩm giàu Beta-caroten, 
-    Lycopen và Vitamin E, rất tốt cho sức khỏe và làn da.
+    Dầu gấc được chiết xuất từ màng đỏ quả gấc chín, hoàn toàn tự nhiên,
+    không chất bảo quản. Sản phẩm giàu Beta-caroten, Lycopen và Vitamin E,
+    tốt cho sức khỏe và làn da.
   </p>
 
   <h3>🎬 Video giới thiệu sản phẩm</h3>
-  <div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.15)">
-    <!-- Thay VIDEO_ID bằng ID video YouTube -->
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
-      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
+  <div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
       allowfullscreen></iframe>
   </div>
 </section>
@@ -110,60 +106,36 @@
 <section>
   <h2>Công dụng nổi bật</h2>
   <div class="features">
-    <div class="card">
-      <h3>👁️ Tốt cho mắt</h3>
-      <p>Hỗ trợ phòng ngừa khô mắt, mỏi mắt, giúp mắt sáng và khỏe hơn.</p>
-    </div>
-    <div class="card">
-      <h3>❤️ Tăng cường sức khỏe</h3>
-      <p>Chống oxy hóa mạnh, hỗ trợ tim mạch và tăng sức đề kháng.</p>
-    </div>
-    <div class="card">
-      <h3>✨ Làm đẹp da</h3>
-      <p>Giúp da mịn màng, làm chậm quá trình lão hóa.</p>
-    </div>
-    <div class="card">
-      <h3>🛡️ An toàn tự nhiên</h3>
-      <p>Không hóa chất, phù hợp cho cả người lớn và trẻ em.</p>
-    </div>
+    <div class="card">👁️ Tốt cho mắt</div>
+    <div class="card">❤️ Tăng sức đề kháng</div>
+    <div class="card">✨ Làm đẹp da</div>
+    <div class="card">🛡️ An toàn tự nhiên</div>
   </div>
 </section>
 
 <section>
-  <h2>Quy trình sản xuất</h2>
+  <h2>Hướng dẫn sử dụng</h2>
   <p>
-    Sản phẩm dầu gấc được chế biến theo quy trình đảm bảo vệ sinh, an toàn thực phẩm, 
-    từ khâu lựa chọn nguyên liệu đến chiết xuất và đóng gói.
+    Dầu gấc là thực phẩm dạng dầu, được đóng trong lọ, sử dụng trực tiếp hằng ngày.
   </p>
-
-  <h3>🎬 Video quy trình sản xuất</h3>
-  <div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.15)">
-    <!-- Thay VIDEO_ID bằng ID video quy trình sản xuất -->
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
-      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
-      allowfullscreen></iframe>
-  </div>
-
-  <h3>Nhóm thực hiện</h3>
   <ul>
-    <li><strong>Thái Thị Thanh Lam</strong> – Nhóm trưởng</li>
-    <li>Nguyễn Văn Danh</li>
-    <li>Đặng Thị Hoa</li>
-    <li>Nguyễn Thị Hoài</li>
-    <li>Nguyễn Hoàng Cương</li>
-    <li>Hoàng Văn Hiệp</li>
+    <li>Dùng <strong>1–2 thìa cà phê/ngày</strong>, uống sau bữa ăn</li>
+    <li>Có thể trộn với cơm, cháo, súp hoặc món ăn khác</li>
+    <li>Sử dụng đều đặn để đạt hiệu quả tốt</li>
   </ul>
-</section>
-
-<section class="cta">
-  <h2>Liên hệ & Đặt mua</h2>
-  <p>Hãy chọn dầu gấc thiên nhiên để chăm sóc sức khỏe cho cả gia đình.</p>
-  <a href="#">📞 Liên hệ ngay</a>
+  <p><strong>Bảo quản:</strong> Đậy kín nắp, để nơi khô ráo, tránh ánh nắng</p>
 </section>
 
 <footer>
-  © 2026 Dầu Gấc Thiên Nhiên | Website giới thiệu sản phẩm
+  © 2026 Dầu Gấc Thiên Nhiên – Nhóm Hội bạn thân
 </footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.left = menu.style.left === "0px" ? "-260px" : "0px";
+}
+</script>
 
 </body>
 </html>
