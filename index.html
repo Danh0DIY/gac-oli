@@ -85,6 +85,7 @@
 
 <header>
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <div id="overlay" onclick="closeMenu()"></div>
   <h1>DẦU GẤC THIÊN NHIÊN</h1>
   <p>Tinh túy từ quả gấc – Bảo vệ sức khỏe & sắc đẹp</p>
   <p><strong>Thương hiệu:</strong> Hội bạn thân</p>
@@ -134,10 +135,26 @@
 </footer>
 
 <script>
+<script>
 function toggleMenu() {
   const menu = document.getElementById("menu");
-  menu.style.left = menu.style.left === "0px" ? "-260px" : "0px";
+  const overlay = document.getElementById("overlay");
+
+  menu.classList.toggle("open");
+
+  if (menu.classList.contains("open")) {
+    overlay.style.display = "block";
+  } else {
+    overlay.style.display = "none";
+  }
 }
+
+function closeMenu() {
+  document.getElementById("menu").classList.remove("open");
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
 </script>
 
 </body>
