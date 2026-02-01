@@ -26,14 +26,10 @@
       font-size: 26px;
       cursor: pointer;
     }
-    .overlay {
-      width: 240px;
-      height: 300px;
-    }
     nav {
       position: fixed;
       top: 0;
-      left: -28280px;
+      left: -260px;
       width: 240px;
       height: 100%;
       background: #fff;
@@ -89,7 +85,6 @@
 
 <header>
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
-  <div id="overlay" onclick="closeMenu()"></div>
   <h1>DẦU GẤC THIÊN NHIÊN</h1>
   <p>Tinh túy từ quả gấc – Bảo vệ sức khỏe & sắc đẹp</p>
   <p><strong>Thương hiệu:</strong> Hội bạn thân</p>
@@ -142,6 +137,7 @@
 function toggleMenu() {
   const menu = document.getElementById("menu");
   menu.style.left = menu.style.left === "0px" ? "-260px" : "0px";
+}
 </script>
 
 </body>
