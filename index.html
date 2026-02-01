@@ -20,17 +20,19 @@
       position: relative;
     }
     .menu-btn {
-      position: absolute;
-      top: 20px;
+      position: fixed;
+      top: 10px;
       left: 20px;
       font-size: 26px;
       cursor: pointer;
+      z-index: 1000;
+
     }
     #overlay{
       position: fixed;
       top: 0;
       left: 240px;
-      width: 100vw;
+      right: 0;
       height: 100vh;
     }
     nav {
